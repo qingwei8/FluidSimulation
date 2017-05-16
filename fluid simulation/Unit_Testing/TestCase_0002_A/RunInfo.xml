@@ -1,0 +1,9 @@
+<NumFrame>5000</NumFrame>
+<ParticleSpacing> 0.5 </ParticleSpacing>
+<IsVoxelFluidParticle> false </IsVoxelFluidParticle>
+<BoxLeftDown>0 0 0.6</BoxLeftDown>
+<BoxRightUp>20 20 30</BoxRightUp>
+
+<FindNeighborsMethod> GRID_SIG </FindNeighborsMethod>
+<DivideRange> 22 22 32 </DivideRange>
+<UnitLength> 1.2 </UnitLength>

@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{FAF9ED74-5326-4EB7-9FAA-424F122A6896}</ProjectGuid>
+    <RootNamespace>FluidSimulation</RootNamespace>
+    <ProjectName>FluidSimulation</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <TargetExt>.dll</TargetExt>
+    <TargetName>HiveFluidSimulation-vc110D</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <TargetName>HiveFluidSimulation-vc110</TargetName>
+    <TargetExt>.dll</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(VOXEL)/include;$(HIVE_ROOT)/include;$(BOOST);$(GLM);$(EIGEN)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>FLUIDSIMULATION_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DisableSpecificWarnings>4305;4244;4251;4018</DisableSpecificWarnings>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <OpenMPSupport>true</OpenMPSupport>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(VOXEL)/lib/x86;$(HIVE_ROOT)/lib/x86;$(BOOST)/x86;</AdditionalLibraryDirectories>
+      <AdditionalDependencies>HiveCommon-vc110D.lib;HiveConfiguration-vc110D.lib;HiveVoxel-vc110D.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>$(VOXEL)/include;$(HIVE_ROOT)/include;$(BOOST);$(GLM);$(EIGEN)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>FLUIDSIMULATION_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DisableSpecificWarnings>4251;4244;4305</DisableSpecificWarnings>
+      <OpenMPSupport>true</OpenMPSupport>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>$(VOXEL)/lib/x86;$(HIVE_ROOT)/lib/x86;$(BOOST)/x86;</AdditionalLibraryDirectories>
+      <AdditionalDependencies>HiveCommon-vc110.lib;HiveConfiguration-vc110.lib;HiveVoxel-vc110.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="BaseFindNeighbors.h" />
+    <ClInclude Include="BoxFileConfig.h" />
+    <ClInclude Include="BoxParticleGenerator.h" />
+    <ClInclude Include="Common.h" />
+    <ClInclude Include="Export.h" />
+    <ClInclude Include="FluidParticle.h" />
+    <ClInclude Include="FluidSimulationInterface.h" />
+    <ClInclude Include="Grid.h" />
+    <ClInclude Include="BaseParticleGenerator.h" />
+    <ClInclude Include="GridFindNeighbors.h" />
+    <ClInclude Include="GridManager.h" />
+    <ClInclude Include="Hashmap.h" />
+    <ClInclude Include="ModelFileConfig.h" />
+    <ClInclude Include="NeighborFinderFactory.h" />
+    <ClInclude Include="NeighborFinderFactoryData.h" />
+    <ClInclude Include="NeighborhoodSearchSpatialHashing.h" />
+    <ClInclude Include="OtherParticleGenerator.h" />
+    <ClInclude Include="Particle.h" />
+    <ClInclude Include="FluidManager.h" />
+    <ClInclude Include="RigidParticle.h" />
+    <ClInclude Include="RunConfig.h" />
+    <ClInclude Include="Scene.h" />
+    <ClInclude Include="SPHKernels.h" />
+    <ClInclude Include="VoxelParticleGenerator.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="BaseFindNeighbors.cpp" />
+    <ClCompile Include="BoxParticleGenerator.cpp" />
+    <ClCompile Include="FluidParticle.cpp" />
+    <ClCompile Include="FluidSimulationInterface.cpp" />
+    <ClCompile Include="Grid.cpp" />
+    <ClCompile Include="GridFindNeighbors.cpp" />
+    <ClCompile Include="GridManager.cpp" />
+    <ClCompile Include="NeighborFinderFactoryData.cpp" />
+    <ClCompile Include="NeighborhoodSearchSpatialHashing.cpp" />
+    <ClCompile Include="OtherParticleGenerator.cpp" />
+    <ClCompile Include="Particle.cpp" />
+    <ClCompile Include="FluidManager.cpp" />
+    <ClCompile Include="RigidParticle.cpp" />
+    <ClCompile Include="RunConfig.cpp" />
+    <ClCompile Include="Scene.cpp" />
+    <ClCompile Include="SPHKernels.cpp" />
+    <ClCompile Include="VoxelParticleGenerator.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

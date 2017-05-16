@@ -1,0 +1,4 @@
+<ParticleInitial> VOXEL </ParticleInitial>
+<FluidModelFile> ../../Model/Fluid_thin331.obj </FluidModelFile>
+<ContainerModelFile>  ../../Model/Box_thin331.obj </ContainerModelFile>
+<ParticleSpacing> 0.05 </ParticleSpacing>

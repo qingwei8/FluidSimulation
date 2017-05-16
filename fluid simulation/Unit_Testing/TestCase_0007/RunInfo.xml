@@ -1,0 +1,8 @@
+<NumFrame>3000</NumFrame>
+<ParticleSpacing> 1.0 </ParticleSpacing>
+<IsVoxelFluidParticle> true </IsVoxelFluidParticle>
+<FluidModelFile> ../../Model/Fluid327.obj </FluidModelFile>
+<ContainerModelFile> ../../Model/Box327.obj </ContainerModelFile>
+<FindNeighborsMethod> GRID_SIG </FindNeighborsMethod>
+<DivideRange> 0 0 0 </DivideRange>
+<UnitLength>  0 </UnitLength>

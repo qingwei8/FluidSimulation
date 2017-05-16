@@ -1,0 +1,4 @@
+<NumFrame> 3000 </NumFrame>
+<ParticleSpacing> 0.5 </ParticleSpacing>
+<IsVoxelFluidParticle> false </IsVoxelFluidParticle>
+<ContainerModelFile> ../../Model/Box331.obj  </ContainerModelFile>

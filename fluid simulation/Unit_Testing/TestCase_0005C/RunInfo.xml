@@ -1,0 +1,8 @@
+<NumFrame> 2000 </NumFrame>
+<ParticleInitial> BOX </ParticleInitial>
+<ParticleSpacing> 0.05 </ParticleSpacing>
+<BoxLeftDown> 0 0 0 </BoxLeftDown>
+<BoxRightUp> 10 10 10 </BoxRightUp>
+<FindNeighborsMethod> GRID_SIG </FindNeighborsMethod>
+<DivideRange> 1.0 1.0 1.0 </DivideRange>
+<UnitLength>  0.05  </UnitLength>

@@ -1,0 +1,4 @@
+<NumFrame>3000</NumFrame>
+<ParticleSpacing> 1.0 </ParticleSpacing>
+<IsVoxelFluidParticle> true </IsVoxelFluidParticle>
+<FluidModelFile> ../../Model/Fluid320.obj </FluidModelFile>

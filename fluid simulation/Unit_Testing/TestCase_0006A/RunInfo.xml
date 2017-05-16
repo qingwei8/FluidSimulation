@@ -1,0 +1,3 @@
+<NumFrame> 2000 </NumFrame>
+<ParticleInitial> OTHER </ParticleInitial>
+<FindNeighborsMethod> SpatialHashing_SIG </FindNeighborsMethod>

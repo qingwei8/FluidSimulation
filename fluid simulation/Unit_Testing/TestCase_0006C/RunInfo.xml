@@ -1,0 +1,6 @@
+<NumFrame> 2000 </NumFrame>
+<ParticleInitial> OTHER </ParticleInitial>
+
+<FindNeighborsMethod> GRID_SIG </FindNeighborsMethod>
+<DivideRange> 1.0 1.0 1.0 </DivideRange>
+<UnitLength>  0.05  </UnitLength>
